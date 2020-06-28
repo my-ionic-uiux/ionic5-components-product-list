@@ -1,0 +1,11 @@
+<ion-list>
+  <h1>Principais Produtos</h1>
+  <ion-slides mode="md" pager="md" scrollbar="md">
+    <ion-slide *ngFor="let slideItem of productSlideList">
+      <ion-col *ngFor="let product of slideItem.productList" size-xs="12" size-sm="6" size-md="4" size-xl="3">
+        <app-catalog-product-card [product]="product"></app-catalog-product-card>
+      </ion-col>
+    </ion-slide>
+  </ion-slides>
+</ion-list>
+  
